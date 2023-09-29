@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: calc(33.33% - 10px);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #007bff, #0056b3);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(to bottom, #0056b3, #007bff);
+        }
+
+        .help-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .about-button,
+        .help-button {
+            border: none;
+            background: none;
+            color: #007bff;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .button-container a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="button-container">
+            <a class="about-button" href="#">关于</a>
+            <a class="help-button" href="https://example.com/help">帮助</a>
+        </div>
+        <h1>样式化表单</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Lower">底层建设:</label>
+                    <input type="text" id="Lower" name="Lower" placeholder="底层建设" value="默认底层建设">
+                </div>
+                <div class="form-group">
+                    <label for="CorpSName">公司简称:</label>
+                    <input type="text" id="CorpSName" name="CorpSName" placeholder="公司简称" value="默认公司简称">
+                </div>
+                <div class="form-group">
+                    <label for="Year">申请年份:</label>
+                    <input type="number" id="Year" name="Year" placeholder="申请年份" value="2023">
+                </div>
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+
+
+    <script>
+
+
+        document.querySelector('.about-button').addEventListener('click', function () {
+            alert('申明:\n1. 本程序只是为了简化归档流程,生产报告后,还请认真核对,若有错误,本程序不对此负责;\n2. 所有处理过程均在本地处理,生成时间长短却决于计算机性能;\n3. 本程序完全开源,如有需要可自行定制');
+        });
+
+
+    </script>
+</body>
+
+</html>

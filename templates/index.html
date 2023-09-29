@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>QuickArchive</title>
+    <link rel="shortcut icon " type="images/x-icon" href="https://www.iconfont.cn/favicon.ico">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: calc(33.33% - 10px);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #007bff, #0056b3);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(to bottom, #0056b3, #007bff);
+        }
+
+        .help-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .about-button,
+        .help-button {
+            border: none;
+            background: none;
+            color: #007bff;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .button-container a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+    	<div class="button-container">
+            <a class="about-button" href="#">关于</a>
+            <a class="help-button" href="https://github.com/leonooo13/QuickArchive#quickarchive" target="_blank">帮助</a>
+        </div>
+        <h1><img src="https://v1.jinrishici.com/all.svg"></h1>
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="PM">项目经理姓名:</label>
+                    <input type="text" id="PM" name="PM" placeholder="项目经理姓名" value="默认姓名">
+                </div>
+                <div class="form-group">
+                    <label for="CorpName">公司名称:</label>
+                    <input type="text" id="CorpName" name="CorpName" placeholder="公司名称" value="默认公司名称">
+                </div>
+                <div class="form-group">
+                    <label for="ContractNo">合同编号:</label>
+                    <input type="text" id="ContractNo" name="ContractNo" placeholder="合同编号" value="默认合同编号">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="SysName">系统名称:</label>
+                    <input type="text" id="SysName" name="SysName" placeholder="系统名称" value="默认系统名称">
+                </div>
+                <div class="form-group">
+                    <label for="Mider1">中级测评师1:</label>
+                    <input type="text" id="Mider1" name="Mider1" placeholder="中级测评师" value="中级测评师">
+                </div>
+                <div class="form-group">
+                    <label for="Mider2">中级测评师2:</label>
+                    <input type="text" id="Mider2" name="Mider2" placeholder="中级测评师2" value="中级测评师2">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Lower">初级测评师:</label>
+                    <input type="text" id="Lower" name="Lower" placeholder="初级测评师" value="初级测评师">
+                </div>
+                <div class="form-group">
+                    <label for="CorpSName">公司简称:</label>
+                    <input type="text" id="CorpSName" name="CorpSName" placeholder="公司简称" value="shortcorp">
+                </div>
+                <div class="form-group">
+                    <label for="Year">当前年份:</label>
+                    <input type="number" id="Year" name="Year" placeholder="2023" value="2023">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="AWner">甲方人员:</label>
+                    <input type="text" id="AWner" name="AWner" placeholder="甲方人员" value="甲方人员">
+                </div>
+                <div class="form-group">
+                    <label for="PmTel">项目经理电话:</label>
+                    <input type="text" id="PmTel" name="PmTel" placeholder="项目经理电话" value="项目经理电话">
+                </div>
+<!--                 <div class="form-group">
+                    <label for="Year">申请年份:</label>
+                    <input type="number" id="Year" name="Year" placeholder="申请年份" value="2023">
+                </div> -->
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="AppDate">任命日期:</label>
+                    <input type="date" id="AppDate" name="AppDate" value="">
+                </div>
+                <div class="form-group">
+                    <label for="PreDate">项目准备会议纪要:</label>
+                    <input type="date" id="PreDate" name="PreDate" value="">
+                </div>
+                <div class="form-group">
+                    <label for="PlanDate">计划书日期:</label>
+                    <input type="date" id="PlanDate" name="PlanDate" value="">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="FaDate">测评方案:</label>
+                    <input type="date" id="FaDate" name="FaDate" value="">
+                </div>
+                <div class="form-group">
+                    <label for="FpDate">项目首次会议议程:</label>
+                    <input type="date" id="FpDate" name="FpDate" value="">
+                </div>
+                <div class="form-group">
+                    <label for="EpDate">项目末次会议议程:</label>
+                    <input type="date" id="EpDate" name="EpDate" value="">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="BgReviewDate">测评报告评审表:</label>
+                    <input type="date" id="BgReviewDate" name="BgReviewDate" value="">
+                </div>
+                <div class="form-group">
+                    <label for="JieXDate">结项会议议程:</label>
+                    <input type="date" id="JieXDate" name="JieXDate" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="TopImg">拓扑图:</label>
+                    <input type="file" name="TopImg">
+                </div>
+            </div>
+            <button type="submit">提交</button>
+            <div style="text-align: center;">
+			  {{ StatuAQ }}
+			</div>
+
+        </form>
+            {% if show_download %}
+            <form action="/download" method="get">
+              <input type="hidden" name="dox_zip" value="{{ doxzip }}">
+              <button type="submit">下载</button>
+            </form>
+            {% endif %}
+
+    </div>
+      <script>
+
+
+        document.getElementById('AppDate').valueAsDate = new Date();
+        document.getElementById('PreDate').valueAsDate = new Date();
+        document.getElementById('PlanDate').valueAsDate = new Date();
+        document.getElementById('FaDate').valueAsDate = new Date();
+        document.getElementById('FpDate').valueAsDate = new Date();
+        document.getElementById('EpDate').valueAsDate = new Date();
+        document.getElementById('BgReviewDate').valueAsDate = new Date();
+        document.getElementById('JieXDate').valueAsDate = new Date();
+        document.querySelector('.about-button').addEventListener('click', function () {
+            alert('申明:\n1. 本程序只是为了简化归档流程,生产报告后,还请认真核对,若有错误,本程序不对此负责;\n2. 所有处理过程均在本地处理,生成时间长短却决于计算机性能;\n3. 本程序完全开源,如有需要可自行定制');
+        });
+
+
+
+    </script>
+</body>
+</html>
